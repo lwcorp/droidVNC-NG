@@ -946,7 +946,7 @@ public class MainActivity extends AppCompatActivity {
         if (host.matches("^172\\.(1[6-9]|2\\d|3[01])\\.\\d+\\.\\d+$")) return false;
         if (host.matches("^192\\.168\\.\\d+\\.\\d+$")) return false;
         if (host.matches("^127\\.\\d+\\.\\d+\\.\\d+$")) return false;
-        if (host.equalsIgnoreCase("localhost")) return false;
+        if (!host.contains(".")) return false;
         return true;
     }
 
